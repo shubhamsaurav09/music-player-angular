@@ -1,0 +1,52 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 75px;
+  font-size: 18px;
+  line-height: 27px;
+  margin-left: 100px;
+
+  .navbar-links {
+    ul {
+      display: flex;
+      gap: 50px;
+
+      a {
+        color: #e5dddd;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .navbar-search {
+    width: 513px;
+    height: 54px;
+    background: #2c0000;
+    border-radius: 50px;
+    display: flex;
+
+    input {
+      padding: 13px 17px 13px 17px;
+      width: calc(100% - 15%);
+      background: transparent;
+      border: none;
+      margin-left: 17px;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 27px;
+      color: #f6f6f6;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    button {
+      position: relative;
+      text-align: end;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,53 @@
+.menubar-container {
+  margin-left: 3.6vw;
+  display: flex;
+  flex-direction: column;
+
+  .menubar-logo {
+    margin-top: 2.4vh;
+    margin-bottom: 6vh;
+    display: flex;
+    color: white;
+
+    .menubar-logo__name {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 36px;
+      line-height: 56px;
+
+      span {
+        color: #ff5656;
+      }
+    }
+  }
+
+  .menubar-options {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    color: #cfc5c5;
+
+    .menubar-options__menuitem {
+      margin-bottom: 5.7vh;
+      .menubar-options__menuitem__group {
+        text-transform: uppercase;
+        margin-bottom: 1.3vh;
+      }
+
+      .menubar-options__menuitem__groupname {
+        color: #f6f6f6;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 27px;
+        display: flex;
+        margin-bottom: 2.03vh;
+        gap: 22px;
+
+        span {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

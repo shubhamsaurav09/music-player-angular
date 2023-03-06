@@ -1,0 +1,55 @@
+<div class="navbar">
+  <div class="navbar-links">
+    <ul>
+      <li><a href="#">Music</a></li>
+      <li><a href="#">Podcast</a></li>
+      <li><a href="#">Live</a></li>
+      <li><a href="#">Radio</a></li>
+    </ul>
+  </div>
+  <div *ngIf="switchState.switchAll" class="navbar-search">
+    <input
+      type="text"
+      placeholder="Search anything"
+      [(ngModel)]="searchAll"
+    /><button (click)="requestAll(searchAll)">
+      <img src="../../../assets/images/Search.png" />
+    </button>
+  </div>
+  <div *ngIf="switchState.switchSong" class="navbar-search">
+    <input
+      type="text"
+      placeholder="Search a Song"
+      [(ngModel)]="searchSong"
+    /><button (click)="requestSong(searchSong)">
+      <img src="../../../assets/images/Search.png" />
+    </button>
+  </div>
+  <div *ngIf="switchState.switchArtist" class="navbar-search">
+    <input
+      type="text"
+      placeholder="Search an Artist"
+      [(ngModel)]="searchArtist"
+    /><button (click)="requestArtist(searchArtist)">
+      <img src="../../../assets/images/Search.png" />
+    </button>
+  </div>
+  <div *ngIf="switchState.switchAlbum" class="navbar-search">
+    <input
+      type="text"
+      placeholder="Search an Album"
+      [(ngModel)]="searchAlbum"
+    /><button (click)="requestAlbum(searchAlbum)">
+      <img src="../../../assets/images/Search.png" />
+    </button>
+  </div>
+  <div *ngIf="switchState.switchPlaylist" class="navbar-search">
+    <input
+      type="text"
+      placeholder="Search a Playlist"
+      [(ngModel)]="searchPlaylist"
+    /><button (click)="requestPlaylist(searchPlaylist)">
+      <img src="../../../assets/images/Search.png" />
+    </button>
+  </div>
+</div>
