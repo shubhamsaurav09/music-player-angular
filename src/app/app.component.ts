@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'music-app';
+  songData: any;
 
   switchState = {
     switchAll: true,
@@ -18,6 +19,11 @@ export class AppComponent {
 
   updateSwitchState(data: any) {
     this.switchState = data;
-    console.log(this.switchState);
+    // console.log(this.switchState);
+  }
+
+  songDataUpdate(data: any) {
+    this.songData = data;
+    // console.log(this.songUrl);
   }
 }

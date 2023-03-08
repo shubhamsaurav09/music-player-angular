@@ -1,13 +1,26 @@
-import { Component, Input } from '@angular/core';
-import { OnInit } from '@angular/core';
-import { SearchService } from 'src/app/services/search.service';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.scss'],
 })
-export class MainComponent implements OnInit {
+export class MainComponent {
+
+  @Output() songDataEmitEvent = new EventEmitter<any>();
+
+  songEventData: any;
+
+  updateSongEventData(data: any) {
+    this.songEventData = data;
+    // console.log(this.songEventData);
+  }
+
+  songDataUpdate(data: any) {
+    this.songDataEmitEvent.emit(data);
+    // console.log(this.songUrl);
+  }
+
   @Input() switchState = {
     switchAll: true,
     switchSong: false,
@@ -15,16 +28,4 @@ export class MainComponent implements OnInit {
     switchAlbum: false,
     switchPlaylist: false,
   };
-
-  homeData: any;
-
-  constructor(private data: SearchService) {}
-
-  ngOnInit() {
-    this.data.getHomeData().subscribe((res) => {
-      this.homeData = res;
-      console.log(this.homeData);
-      console.log(this.homeData.data.trending.songs[0].name);
-    });
-  }
 }

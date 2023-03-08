@@ -14,6 +14,8 @@ import { MainComponent } from './components/main/main.component';
 import { PlayerComponent } from './components/player/player.component';
 import { ListComponent } from './components/list/list.component';
 import { FormsModule } from '@angular/forms';
+import { SongsComponent } from './pages/songs/songs.component';
+import { SecondsToMinutePipe } from './seconds-to-minute.pipe';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,8 @@ import { FormsModule } from '@angular/forms';
     MainComponent,
     PlayerComponent,
     ListComponent,
+    SongsComponent,
+    SecondsToMinutePipe,
   ],
   imports: [BrowserModule, HttpClientModule, FormsModule],
   providers: [],

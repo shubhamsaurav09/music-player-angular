@@ -17,7 +17,7 @@
       </div>
       <div class="sidebar-notifications_content-detail">
         <p class="feature">Playlist Shared</p>
-        <p>To 8 users</p>
+        <p class="info">To 8 users</p>
       </div>
       <div class="sidebar-notifications_content-card">
         <img src="../../../assets/images/NotificationMusic.png" />
@@ -60,5 +60,7 @@
       </div>
     </div>
   </div>
-  <div class="sidebar-player"></div>
+  <div class="sidebar-player">
+    <app-player [songDataUpdate]="songDataUpdate"></app-player>
+  </div>
 </div>

@@ -1,0 +1,70 @@
+.song-search__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 1rem;
+  margin-inline: 2rem;
+
+  .song-search__song-row {
+    // display: flex;
+    // align-items: center;
+    // justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    padding: 20px;
+    z-index: 10;
+    color: #f6f6f6;
+
+    &:hover {
+      background-color: #520000;
+
+      img {
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    .song-row__song {
+      max-width: 150px;
+      max-height: 150px;
+      transition: transform 0.3s ease-in;
+
+      &:active {
+        transform: scale(0.9);
+      }
+    }
+
+    .song-row__info {
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem;
+      margin-left: 1.5rem;
+
+      .song-row__info-details {
+        h2 {
+          font-size: 1.4rem;
+        }
+
+        p {
+          font-size: 0.85rem;
+        }
+      }
+
+      .song-row__info-duration {
+        font-size: 0.75rem;
+      }
+    }
+  }
+}
+
+.song-search__container-img {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 1rem;
+  margin-inline: 2rem;
+
+  img {
+    max-width: 100%;
+    filter: opacity(0.3);
+  }
+}

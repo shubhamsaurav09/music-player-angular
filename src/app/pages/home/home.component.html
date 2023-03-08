@@ -1,1 +1,42 @@
-<p>home works!</p>
+<div class="home-container">
+  <div class="home-trending-songs__container">
+    <div class="home-trending-songs__bar">
+      <div>Trending Songs</div>
+      <div>...</div>
+    </div>
+    <div class="home-trending-songs__content">
+      <div *ngFor="let song of trendingSongs" class="home-trending-songs__card">
+        <img src="{{ song.image[2].link }}" />
+        <img id="songPlayButton" src="../../../assets/images/PlayIcon.png" />
+
+        <div class="home-trending-songs__detail">
+          <p class="home-trending-songs__song">
+            {{ song.name | slice : 0 : 10 }}
+          </p>
+          <p class="home-trending-songs__artist">
+            {{ song.primaryArtists[0].name }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="home-trending-albums__container">
+    <div class="home-trending-albums__bar">
+      <div>Trending Albums</div>
+      <div>...</div>
+    </div>
+    <div class="home-trending-albums__content">
+      <div
+        *ngFor="let album of trendingAlbums"
+        class="home-trending-albums__card"
+      >
+        <img src="{{ album.image[2].link }}" />
+        <div class="home-trending-albums__detail">
+          <p class="home-trending-albums__album">
+            {{ album.name | slice : 0 : 10 }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

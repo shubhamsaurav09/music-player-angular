@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { QuerySearchService } from 'src/app/services/query-search.service';
 
 @Component({
@@ -7,6 +7,8 @@ import { QuerySearchService } from 'src/app/services/query-search.service';
   styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent {
+  @Output() songEmitEvent = new EventEmitter<any>();
+
   @Input() switchState = {
     switchAll: true,
     switchSong: false,
@@ -32,35 +34,31 @@ export class NavbarComponent {
   requestAll(searchAll: string) {
     this.search.getAll(searchAll).subscribe((res) => {
       this.searchAllData = res;
-      console.log(this.searchAllData);
     });
   }
 
   requestSong(searchSong: string) {
     this.search.getSong(searchSong).subscribe((res) => {
       this.searchSongData = res;
-      console.log(this.searchSongData);
+      this.songEmitEvent.emit(this.searchSongData);
     });
   }
 
   requestArtist(searchArtist: string) {
     this.search.getArtist(searchArtist).subscribe((res) => {
       this.searchArtistData = res;
-      console.log(this.searchArtistData);
     });
   }
 
   requestAlbum(searchAlbum: string) {
     this.search.getAlbum(searchAlbum).subscribe((res) => {
       this.searchAlbumData = res;
-      console.log(this.searchAlbumData);
     });
   }
 
   requestPlaylist(searchPlaylist: string) {
     this.search.getPlaylist(searchPlaylist).subscribe((res) => {
       this.searchPlaylistData = res;
-      console.log(this.searchPlaylistData);
     });
   }
 }

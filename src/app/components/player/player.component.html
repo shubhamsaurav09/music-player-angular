@@ -1,1 +1,33 @@
-<p>player works!</p>
+<div class="player-container">
+  <h5>Now Playing</h5>
+  <img
+    id="player-song-img"
+    src="../../../assets/images/Background2.jpg"
+    alt="Search for a Song"
+    #imagePoster
+  />
+  <h2 #songName></h2>
+  <h4 #artistName></h4>
+  <audio #audioPlayer controls>
+    <source src="" type="audio/mp4" />
+  </audio>
+  <div class="player-controls">
+    <button (click)="pauseSong()">
+      <img
+        id="pauseButton"
+        src="../../../assets/images/PauseButton.png"
+        alt="Play Button"
+      />
+    </button>
+    <button (click)="playSong()">
+      <img
+        id="playButton"
+        src="../../../assets/images/PlayButton.png"
+        alt="Play Button"
+      />
+    </button>
+    <button id="stopButton" (click)="stopSong()">
+      <img src="../../../assets/images/StopButton.png" alt="" />
+    </button>
+  </div>
+</div>

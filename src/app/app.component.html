@@ -2,6 +2,13 @@
   <div class="musicapp-menubar">
     <app-menubar (routeEvent)="updateSwitchState($event)"></app-menubar>
   </div>
-  <div class="musicapp-main"><app-main [switchState]="switchState"></app-main></div>
-  <div class="musicapp-sidebar"><app-sidebar></app-sidebar></div>
+  <div class="musicapp-main">
+    <app-main
+      [switchState]="switchState"
+      (songDataEmitEvent)="songDataUpdate($event)"
+    ></app-main>
+  </div>
+  <div class="musicapp-sidebar">
+    <app-sidebar [songData]="songData"></app-sidebar>
+  </div>
 </div>

@@ -1,6 +1,19 @@
 <div class="main-container">
-  <div class="main-container__navbar"><app-navbar [switchState]="switchState" ></app-navbar></div>
-  <div class="main-container__hero">
+  <div class="main-container__navbar">
+    <app-navbar
+      [switchState]="switchState"
+      (songEmitEvent)="updateSongEventData($event)"
+    ></app-navbar>
   </div>
-  <div class="main-container__list"><app-list></app-list></div>
+  <div class="main-container__main">
+    <app-home *ngIf="switchState.switchAll"></app-home>
+    <app-songs
+      *ngIf="switchState.switchSong"
+      [songSearchData]="songEventData"
+      (songDataEmitEvent)="songDataUpdate($event)"
+    ></app-songs>
+    <app-albums *ngIf="switchState.switchAlbum"></app-albums>
+    <app-artists *ngIf="switchState.switchArtist"></app-artists>
+    <app-playlists *ngIf="switchState.switchPlaylist"></app-playlists>
+  </div>
 </div>

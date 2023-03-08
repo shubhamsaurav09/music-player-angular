@@ -13,7 +13,7 @@ export class QuerySearchService {
 
   getSong(query: string) {
     return this.client.get(
-      `https://saavn.me/search/songs?query=${query}&page=1&limit=4`
+      `https://saavn.me/search/songs?query=${query}&page=1&limit=10`
     );
   }
 
