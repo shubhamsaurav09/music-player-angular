@@ -1,1 +1,14 @@
-<p>albums works!</p>
+<div *ngIf="likedSongData.length > 0" class="song-search__container">
+  <div *ngFor="let song of likedSongData" class="song-search__song-row">
+    <img class="song-row__song" src="{{ song.image }}" />
+    <div class="song-row__info">
+      <div class="song-row__info-details">
+        <h2>{{ song.name }}</h2>
+        <p>{{ song.artists | slice : 0 : 20 }}</p>
+      </div>
+      <div class="song-row__info-duration">
+        <p>{{ song.duration | secondsToMinute }}</p>
+      </div>
+    </div>
+  </div>
+</div>

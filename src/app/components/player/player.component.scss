@@ -47,18 +47,14 @@
     justify-content: space-around;
 
     button {
+      color: white;
       background: transparent;
       border: none;
-    }
-
-    button {
       cursor: pointer;
-      margin-bottom: 4px;
+      margin-bottom: 6px;
 
-      img {
-        width: 90%;
-        max-width: 24px;
-        max-height: 24px;
+      &:hover {
+        color: black;
       }
     }
   }

@@ -16,6 +16,7 @@ import { ListComponent } from './components/list/list.component';
 import { FormsModule } from '@angular/forms';
 import { SongsComponent } from './pages/songs/songs.component';
 import { SecondsToMinutePipe } from './seconds-to-minute.pipe';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,7 @@ import { SecondsToMinutePipe } from './seconds-to-minute.pipe';
     SongsComponent,
     SecondsToMinutePipe,
   ],
-  imports: [BrowserModule, HttpClientModule, FormsModule],
+  imports: [BrowserModule, HttpClientModule, FormsModule, FontAwesomeModule],
   providers: [],
   bootstrap: [AppComponent],
 })

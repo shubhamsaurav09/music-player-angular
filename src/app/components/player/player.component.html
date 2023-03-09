@@ -13,24 +13,20 @@
   </audio>
   <div class="player-controls">
     <button (click)="pauseSong()">
-      <img
-        id="pauseButton"
-        src="../../../assets/images/PauseButton.png"
-        alt="Play Button"
-      />
+      <fa-icon [icon]="faPause"></fa-icon>
     </button>
     <button (click)="playSong()">
-      <img
-        id="playButton"
-        src="../../../assets/images/PlayButton.png"
-        alt="Play Button"
-      />
+      <fa-icon [icon]="faPlay"></fa-icon>
     </button>
     <button id="stopButton" (click)="stopSong()">
-      <img src="../../../assets/images/StopButton.png" alt="" />
+      <fa-icon [icon]="faStop"></fa-icon>
     </button>
-    <!-- <button id="likeButton" (click)="addToCollection()">
-  
-    </button> -->
+    <button
+      [ngStyle]="{ color: liked ? 'green' : 'white' }"
+      id="likeButton"
+      (click)="addToCollection()"
+    >
+      <fa-icon [icon]="faHeart"></fa-icon>
+    </button>
   </div>
 </div>
