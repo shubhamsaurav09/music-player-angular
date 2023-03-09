@@ -1,6 +1,6 @@
 .song-search__container {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: auto;
   padding: 1rem;
   margin-inline: 2rem;
 
@@ -52,16 +52,10 @@
       }
     }
   }
-}
 
-.song-search__container-img {
-  display: grid;
-  grid-template-columns: 1fr;
-  padding: 1rem;
-  margin-inline: 2rem;
-
-  img {
-    max-width: 100%;
-    filter: opacity(0.3);
+  @media (max-width: 480px) {
+    .song-row__info {
+      flex-direction: column;
+    }
   }
 }

@@ -31,9 +31,14 @@ export class NavbarComponent {
 
   constructor(private search: QuerySearchService) {}
 
-  requestAll(searchAll: string) {
-    this.search.getAll(searchAll).subscribe((res) => {
-      this.searchAllData = res;
+  requestAll(searchSong: string) {
+    // Here, above, temporarily I have change searchAll to searchSong
+    // this.search.getAll(searchAll).subscribe((res) => {
+    //   this.searchAllData = res;
+    // });
+    this.search.getSong(searchSong).subscribe((res) => {
+      this.searchSongData = res;
+      this.songEmitEvent.emit(this.searchSongData);
     });
   }
 

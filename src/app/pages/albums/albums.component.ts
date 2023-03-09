@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AlbumsComponent implements OnInit {
   likedSongData: any;
+
   ngOnInit() {
     const data = localStorage.getItem('likedSongData');
     if (data) {
