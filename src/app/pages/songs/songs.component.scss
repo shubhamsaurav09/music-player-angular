@@ -5,9 +5,6 @@
   margin-inline: 2rem;
 
   .song-search__song-row {
-    // display: flex;
-    // align-items: center;
-    // justify-content: space-between;
     display: grid;
     grid-template-columns: 1fr 4fr;
     padding: 20px;
@@ -25,8 +22,8 @@
     }
 
     .song-row__song {
-      max-width: 150px;
-      max-height: 150px;
+      max-width: 100px;
+      max-height: 100px;
       transition: transform 0.3s ease-in;
 
       &:active {

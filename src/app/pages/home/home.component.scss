@@ -65,6 +65,9 @@
     flex-direction: column;
     gap: 1rem;
 
+    @media (max-width: 768px) {
+    }
+
     .home-trending-albums__bar {
       display: flex;
       justify-content: space-between;
@@ -74,10 +77,23 @@
       display: grid;
       grid-template-columns: repeat(7, 1fr);
       gap: 1rem;
+
+      @media (min-width: 481px) and (max-width: 768px) {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      @media (max-width: 480px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      @media (max-width: 320px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
       .home-trending-albums__card {
         align-self: center;
         img {
-          width: 100%;
+          // width: 100%;
           max-width: 100%;
           border-radius: 1rem;
         }
