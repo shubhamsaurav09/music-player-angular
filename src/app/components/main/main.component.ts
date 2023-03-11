@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-main',
@@ -10,7 +10,7 @@ export class MainComponent {
 
   songEventData: any;
   currentSong: any;
-  routeToPlayer: boolean = false;
+  routeToSongs: boolean = false;
 
   @Input() switchState = {
     switchAll: true,
@@ -37,8 +37,9 @@ export class MainComponent {
 
   updateSongEventData(data: any) {
     this.songEventData = data;
-
-    // console.log(this.songEventData);
+    this.routeToSongs = true;
+    console.log(this.songEventData);
+    console.log(this.routeToSongs);
   }
 
   songDataUpdate(data: any) {
@@ -48,9 +49,5 @@ export class MainComponent {
 
   currentSongData(data: any) {
     this.currentSong = data;
-  }
-
-  playerRouteUpdate(value: boolean) {
-    this.routeToPlayer = value;
   }
 }

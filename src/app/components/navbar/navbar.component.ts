@@ -32,7 +32,7 @@ export class NavbarComponent {
   constructor(private search: QuerySearchService) {}
 
   requestAll(searchSong: string) {
-    // Here, above, temporarily I have change searchAll to searchSong
+    // Here, temporarily I have change searchAll, searchAlbum to searchSong
     // this.search.getAll(searchAll).subscribe((res) => {
     //   this.searchAllData = res;
     // });
@@ -55,9 +55,10 @@ export class NavbarComponent {
     });
   }
 
-  requestAlbum(searchAlbum: string) {
-    this.search.getAlbum(searchAlbum).subscribe((res) => {
-      this.searchAlbumData = res;
+  requestAlbum(searchSong: string) {
+    this.search.getSong(searchSong).subscribe((res) => {
+      this.searchSongData = res;
+      this.songEmitEvent.emit(this.searchSongData);
     });
   }
 

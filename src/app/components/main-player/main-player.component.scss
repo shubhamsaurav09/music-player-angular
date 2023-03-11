@@ -8,18 +8,24 @@
   color: #f6f6f6;
   background: #6b0000;
   z-index: 100;
+
   @media (max-width: 480px) {
-    padding: 0.5rem;
+    padding: 0;
+    height: 120px;
+
+    .player-container {
+      margin-inline: 0.5rem;
+    }
+
+    #player-song-img {
+      max-height: 80px;
+    }
   }
 
   .player-container {
     display: grid;
     grid-template-columns: 1fr 1fr 2fr;
     margin-inline: 2rem;
-
-    @media (max-width: 480px) {
-      margin-inline: 0.5rem;
-    }
 
     .player-playing {
       display: flex;

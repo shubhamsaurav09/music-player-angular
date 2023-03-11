@@ -6,9 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./albums.component.scss'],
 })
 export class AlbumsComponent implements OnInit {
-
-
-  
   likedSongData: any;
 
   ngOnInit() {

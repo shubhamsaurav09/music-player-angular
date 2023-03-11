@@ -3,7 +3,6 @@ import {
   ViewChild,
   Input,
   OnChanges,
-  ElementRef,
 } from '@angular/core';
 import {
   faHeart,

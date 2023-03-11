@@ -13,8 +13,9 @@ import {
 })
 export class SongsComponent implements OnChanges {
   @Input() songSearchData: any;
+  @Input() songRoute: boolean = false;
   @Output() songDataEmitEvent = new EventEmitter<any>();
-  @Output() routeMainPlayerEmitEvent = new EventEmitter<boolean>();
+  // @Output() routeMainPlayerEmitEvent = new EventEmitter<boolean>();
 
   songArray: any = [];
   searchResults: boolean = false;
@@ -32,7 +33,7 @@ export class SongsComponent implements OnChanges {
 
   playSong(data: any) {
     this.songDataEmitEvent.emit(data);
-    this.routeMainPlayerEmitEvent.emit(true);
+    // this.routeMainPlayerEmitEvent.emit(true);
     // console.log(this.songUrlUpdate);
   }
 }

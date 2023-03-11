@@ -10,9 +10,9 @@
   <div *ngIf="switchState.switchAll" class="navbar-search">
     <input
       type="text"
-      placeholder="Search anything"
-      [(ngModel)]="searchAll"
-    /><button (click)="requestAll(searchAll)">
+      placeholder="Search a Song"
+      [(ngModel)]="searchSong"
+    /><button (click)="requestSong(searchSong)">
       <img src="../../../assets/images/Search.png" />
     </button>
   </div>
@@ -37,9 +37,9 @@
   <div *ngIf="switchState.switchAlbum" class="navbar-search">
     <input
       type="text"
-      placeholder="Search an Album"
-      [(ngModel)]="searchAlbum"
-    /><button (click)="requestAlbum(searchAlbum)">
+      placeholder="Search a Song"
+      [(ngModel)]="searchSong"
+    /><button (click)="requestSong(searchSong)">
       <img src="../../../assets/images/Search.png" />
     </button>
   </div>

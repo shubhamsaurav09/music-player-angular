@@ -38,19 +38,22 @@ $mainPlayer-background: linear-gradient(
   @media (max-width: 768px) {
     grid-template-columns: 1fr 6fr;
   }
+}
 
-  @media (max-width: 480px) {
-    grid-template-columns: 1fr;
+@media (max-width: 480px) {
+  .musicapp-container {
+    display: flex;
+    flex-direction: column;
     .musicapp-menubar {
-      display: none;
-    }
-
-    .musicapp-sidebar {
-      display: none;
+      width: 100vw;
     }
 
     .musicapp-main {
       width: 100vw;
+    }
+
+    .musicapp-sidebar {
+      display: none;
     }
   }
 }

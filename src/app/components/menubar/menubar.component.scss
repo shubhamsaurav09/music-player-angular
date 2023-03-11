@@ -96,3 +96,33 @@
     }
   }
 }
+
+.menubar-container_top {
+  display: none;
+  color: #f6f6f6;
+  @media (max-width: 480px) {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+
+    .menubar-top-icon {
+      img {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+
+    .menubar-top-options__menuitem {
+      ul {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+
+        .menubar-top__menuitem__group {
+          span {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
