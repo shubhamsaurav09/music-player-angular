@@ -11,8 +11,8 @@
     <input
       type="text"
       placeholder="Search anything"
-      [(ngModel)]="searchSong"
-    /><button (click)="requestAll(searchSong)">
+      [(ngModel)]="searchAll"
+    /><button (click)="requestAll(searchAll)">
       <img src="../../../assets/images/Search.png" />
     </button>
   </div>
@@ -53,14 +53,3 @@
     </button>
   </div>
 </div>
-
-<!-- searchAll
-<div *ngIf="switchState.switchAll" class="navbar-search">
-  <input
-    type="text"
-    placeholder="Search anything"
-    [(ngModel)]="searchAll"
-  /><button (click)="requestAll(searchAll)">
-    <img src="../../../assets/images/Search.png" />
-  </button>
-</div> -->

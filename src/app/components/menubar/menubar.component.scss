@@ -2,6 +2,10 @@
   display: grid;
   grid-template-columns: 1fr;
 
+  @media (max-width: 768px) {
+    display: none;
+  }
+
   .menubar-logo {
     margin-bottom: 2rem;
     display: flex;
@@ -21,7 +25,6 @@
   }
 
   .menubar-options {
-    font-style: normal;
     font-weight: 600;
     font-size: 14px;
     line-height: 21px;
@@ -56,6 +59,39 @@
             transform: scale(1.1);
           }
         }
+      }
+    }
+  }
+}
+
+.menubar-container_small {
+  display: none;
+  @media (min-width: 481px) and (max-width: 768px) {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr;
+    color: #f6f6f6;
+
+    .menubar-small-icon {
+      margin-left: 1rem;
+    }
+
+    .menubar-small__menuitem__group {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 3rem;
+      color: #cfc5c5;
+      margin-top: 2rem;
+    }
+
+    .menubar-small__menuitem__groupname {
+      display: grid;
+      grid-template-columns: 1fr;
+      margin-bottom: 0.8rem;
+      align-self: center;
+
+      span {
+        font-size: 12px;
       }
     }
   }

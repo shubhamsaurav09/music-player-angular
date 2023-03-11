@@ -1,4 +1,10 @@
-import { Component, ViewChild, Input, OnChanges } from '@angular/core';
+import {
+  Component,
+  ViewChild,
+  Input,
+  OnChanges,
+  ElementRef,
+} from '@angular/core';
 import {
   faHeart,
   faPlay,
@@ -8,15 +14,15 @@ import {
 import { LikedServiceService } from 'src/app/services/liked-service.service';
 
 @Component({
-  selector: 'app-player',
-  templateUrl: './player.component.html',
-  styleUrls: ['./player.component.scss'],
+  selector: 'app-main-player',
+  templateUrl: './main-player.component.html',
+  styleUrls: ['./main-player.component.scss'],
 })
-export class PlayerComponent implements OnChanges {
-  @ViewChild('audioPlayer', { static: false }) audioPlayer: any;
-  @ViewChild('imagePoster') imagePoster: any;
-  @ViewChild('songName') songName: any;
-  @ViewChild('artistName') artistName: any;
+export class MainPlayerComponent implements OnChanges {
+  @ViewChild('mainAudioPlayer', { static: true }) mainAudioPlayer: any;
+  @ViewChild('mainImagePoster') mainImagePoster: any;
+  @ViewChild('mainSongName') mainSongName: any;
+  @ViewChild('mainArtistName') mainArtistName: any;
   @Input() songDataUpdate: any;
 
   faHeart = faHeart;
@@ -34,28 +40,28 @@ export class PlayerComponent implements OnChanges {
       return;
     } else {
       this.songData = this.songDataUpdate;
-      console.log(this.songData.downloadUrl[4].link);
+      console.log(this.songData);
     }
-    this.audioPlayer.nativeElement.src = this.songData.downloadUrl[4].link;
-    this.imagePoster.nativeElement.src = this.songData.image[1].link;
-    this.songName.nativeElement.innerHTML = this.songData.name;
-    this.artistName.nativeElement.innerHTML = this.songData.primaryArtists;
+    this.mainAudioPlayer.nativeElement.src = this.songData.downloadUrl[4].link;
+    this.mainImagePoster.nativeElement.src = this.songData.image[1].link;
+    this.mainSongName.nativeElement.innerHTML = this.songData.name;
+    this.mainArtistName.nativeElement.innerHTML = this.songData.primaryArtists;
     this.liked = false;
     this.playSong();
     console.log(this.songData);
   }
 
   playSong() {
-    this.audioPlayer.nativeElement.play();
+    this.mainAudioPlayer.nativeElement.play();
   }
 
   pauseSong() {
-    this.audioPlayer.nativeElement.pause();
+    this.mainAudioPlayer.nativeElement.pause();
   }
 
   stopSong() {
-    this.audioPlayer.nativeElement.currentTime = 0;
-    this.audioPlayer.nativeElement.pause();
+    this.mainAudioPlayer.nativeElement.currentTime = 0;
+    this.mainAudioPlayer.nativeElement.pause();
   }
 
   addToCollection() {

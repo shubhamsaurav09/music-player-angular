@@ -1,0 +1,40 @@
+<div class="player-container-wrapper">
+  <div class="player-container">
+    <div class="player-playing">
+      <h5>Now Playing</h5>
+      <img
+        #mainImagePoster
+        id="player-song-img"
+        src="../../../assets/images/Background2.jpg"
+        alt="Search for a Song"
+      />
+    </div>
+    <div class="player-info">
+      <h2 #mainSongName></h2>
+      <h4 #mainArtistName></h4>
+    </div>
+    <div class="player-controls">
+      <audio #mainAudioPlayer controls>
+        <source src="" type="audio/mp4" />
+      </audio>
+      <div class="player-controls-buttons">
+        <button (click)="pauseSong()">
+          <fa-icon [icon]="faPause"></fa-icon>
+        </button>
+        <button (click)="playSong()">
+          <fa-icon [icon]="faPlay"></fa-icon>
+        </button>
+        <button id="stopButton" (click)="stopSong()">
+          <fa-icon [icon]="faStop"></fa-icon>
+        </button>
+        <button
+          [ngStyle]="{ color: liked ? 'red' : 'white' }"
+          id="likeButton"
+          (click)="addToCollection()"
+        >
+          <fa-icon [icon]="faHeart"></fa-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -11,9 +11,12 @@
       *ngIf="switchState.switchSong"
       [songSearchData]="songEventData"
       (songDataEmitEvent)="songDataUpdate($event)"
+      (routeMainPlayerEmitEvent)="playerRouteUpdate($event)"
     ></app-songs>
     <app-albums *ngIf="switchState.switchAlbum"></app-albums>
     <app-artists *ngIf="switchState.switchArtist"></app-artists>
     <app-playlists *ngIf="switchState.switchPlaylist"></app-playlists>
+    <app-main-player [songDataUpdate]="currentSong"></app-main-player>
   </div>
 </div>
+<!-- *ngIf="routeToPlayer" -->

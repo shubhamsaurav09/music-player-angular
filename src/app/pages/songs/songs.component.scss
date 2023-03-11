@@ -8,7 +8,7 @@
     display: grid;
     grid-template-columns: 1fr 4fr;
     padding: 20px;
-    z-index: 10;
+    z-index: 1;
     color: #f6f6f6;
 
     &:hover {
@@ -65,11 +65,10 @@
   grid-template-columns: 1fr;
   padding: 1rem;
   margin-inline: 2rem;
+  // height: 200vh;
 
   img {
     max-width: 100%;
     filter: opacity(0.3);
   }
-
-  
 }
