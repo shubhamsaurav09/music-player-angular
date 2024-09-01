@@ -39,15 +39,13 @@ export class MainPlayerComponent implements OnChanges {
       return;
     } else {
       this.songData = this.songDataUpdate;
-      console.log(this.songData);
     }
-    this.mainAudioPlayer.nativeElement.src = this.songData.downloadUrl[4].link;
-    this.mainImagePoster.nativeElement.src = this.songData.image[1].link;
+    this.mainAudioPlayer.nativeElement.src = this.songData.downloadUrl[4].url;
+    this.mainImagePoster.nativeElement.src = this.songData.image[1].url;
     this.mainSongName.nativeElement.innerHTML = this.songData.name;
-    this.mainArtistName.nativeElement.innerHTML = this.songData.primaryArtists;
+    this.mainArtistName.nativeElement.innerHTML = this.songData.artists.primary[0].name;
     this.liked = false;
     this.playSong();
-    console.log(this.songData);
   }
 
   playSong() {
