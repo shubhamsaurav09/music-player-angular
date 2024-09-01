@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-albums',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./albums.component.scss'],
 })
 export class AlbumsComponent implements OnInit {
+  @Output() songDataEmitEvent = new EventEmitter<any>();
   likedSongData: any;
 
   ngOnInit() {
@@ -14,5 +15,9 @@ export class AlbumsComponent implements OnInit {
       this.likedSongData = JSON.parse(data);
     }
     console.log(this.likedSongData);
+  }
+
+  playSong(data: any) {
+    this.songDataEmitEvent.emit(data);
   }
 }

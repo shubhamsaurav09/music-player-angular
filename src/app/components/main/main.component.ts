@@ -20,21 +20,6 @@ export class MainComponent {
     switchPlaylist: false,
   };
 
-  // @HostListener('window:resize', ['$event'])
-  // isSmallScreen: any;
-
-  // getScreenWidth: any;
-
-  // ngOnInit() {
-  //   this.getScreenWidth = window.innerWidth;
-  //   console.log('On Init');
-  //   console.log(this.getScreenWidth);
-  //   if (this.getScreenWidth < 769) {
-  //     this.isSmallScreen = true;
-  //   }
-  //   this.isSmallScreen = false;
-  // }
-
   updateSongEventData(data: any) {
     this.songEventData = data;
     this.routeToSongs = true;

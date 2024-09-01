@@ -1,6 +1,10 @@
 <div *ngIf="likedSongData.length > 0" class="song-search__container">
   <div *ngFor="let song of likedSongData" class="song-search__song-row">
-    <img class="song-row__song" src="{{ song.image }}" />
+    <img
+    (click)="playSong(song.downloadUrl)"
+    class="song-row__song"
+    src="{{ song.image }}"
+  />
     <div class="song-row__info">
       <div class="song-row__info-details">
         <h2>{{ song.name }}</h2>

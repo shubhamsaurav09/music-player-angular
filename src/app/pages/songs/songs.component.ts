@@ -15,7 +15,6 @@ export class SongsComponent implements OnChanges {
   @Input() songSearchData: any;
   @Input() songRoute: boolean = false;
   @Output() songDataEmitEvent = new EventEmitter<any>();
-  // @Output() routeMainPlayerEmitEvent = new EventEmitter<boolean>();
 
   songArray: any = [];
   searchResults: boolean = false;
@@ -27,13 +26,9 @@ export class SongsComponent implements OnChanges {
       this.songArray = this.songSearchData.data.results;
       this.searchResults = true;
     }
-    // console.log(this.songSearchData);
-    // console.log(this.songArray);
   }
 
   playSong(data: any) {
     this.songDataEmitEvent.emit(data);
-    // this.routeMainPlayerEmitEvent.emit(true);
-    // console.log(this.songUrlUpdate);
   }
 }
