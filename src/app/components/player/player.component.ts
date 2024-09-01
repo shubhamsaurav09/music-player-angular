@@ -36,10 +36,10 @@ export class PlayerComponent implements OnChanges {
       this.songData = this.songDataUpdate;
       console.log(this.songData.downloadUrl[4].link);
     }
-    this.audioPlayer.nativeElement.src = this.songData.downloadUrl[4].link;
-    this.imagePoster.nativeElement.src = this.songData.image[1].link;
+    this.audioPlayer.nativeElement.src = this.songData.downloadUrl[4].url;
+    this.imagePoster.nativeElement.src = this.songData.image[1].url;
     this.songName.nativeElement.innerHTML = this.songData.name;
-    this.artistName.nativeElement.innerHTML = this.songData.primaryArtists;
+    this.artistName.nativeElement.innerHTML = this.songData.artists.primary[0].name;
     this.liked = false;
     this.playSong();
     console.log(this.songData);
@@ -62,9 +62,9 @@ export class PlayerComponent implements OnChanges {
     this.liked = true;
     var likedSongsDetails = {
       name: this.songData.name,
-      image: this.songData.image[1].link,
-      artists: this.songData.primaryArtists,
-      downloadUrl: this.songData.downloadUrl[4].link,
+      image: this.songData.image[1].url,
+      artists: this.songData.artists.primary[0].name,
+      downloadUrl: this.songData.downloadUrl[4].url,
       duration: this.songData.duration,
     };
     this.LikedServiceService.addLikedSong(likedSongsDetails);

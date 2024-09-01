@@ -65,9 +65,9 @@ export class MainPlayerComponent implements OnChanges {
     this.liked = true;
     var likedSongsDetails = {
       name: this.songData.name,
-      image: this.songData.image[1].link,
-      artists: this.songData.primaryArtists,
-      downloadUrl: this.songData.downloadUrl[4].link,
+      image: this.songData.image[1].url,
+      artists: this.songData.artists.primary[0].name,
+      downloadUrl: this.songData.downloadUrl[4].url,
       duration: this.songData.duration,
     };
     this.LikedServiceService.addLikedSong(likedSongsDetails);
