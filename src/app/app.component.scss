@@ -7,23 +7,32 @@ $mainPlayer-background: linear-gradient(
   linear-gradient(180deg, #4c0000 0%, #0a0a0a 100%);
 
 .musicapp-container {
+  width: 100%;
+  height: 100%;
   display: grid;
   grid-template-columns: 1fr 2.5fr 1fr;
   margin: 0 auto;
-  height: 100vh;
 
   .musicapp-menubar {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
     background-color: $leftbar-background;
-    padding: 30px;
+    padding: 2rem;
     filter: drop-shadow(4px 4px 16px rgba(0, 0, 0, 0.04))
       drop-shadow(-4px -4px 27px rgba(0, 0, 0, 0.25));
   }
 
   .musicapp-main {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
     background: linear-gradient(180deg, #4c0000 0%, #0a0a0a 100%);
   }
 
   .musicapp-sidebar {
+    width: 100%;
+    height: 100%;
     background: linear-gradient(
         90deg,
         rgba(0, 0, 0, 0) 0%,

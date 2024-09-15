@@ -1,22 +1,228 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  font-family: Roboto, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 *,
 *::after,
 *::before {
   margin: 0;
   padding: 0;
-  text-decoration: none;
-  font-family: "Poppins", sans-serif;
-  list-style: none;
   box-sizing: border-box;
-  // outline: 1px solid red;
-  // -ms-overflow-style: none; /* Internet Explorer 10+ */
-  // scrollbar-width: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
-html {
-  scroll-behavior: smooth;
+/* Meyer's CSS Reset */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
-::-webkit-scrollbar {
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Hides extra eye icon in password fields */
+input::-ms-reveal {
   display: none;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+width: 0px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-right: none;
+  border-left: none;
+}
+
+::-webkit-scrollbar-track-piece:end {
+  background: transparent;
+  margin-bottom: 15px;
+}
+
+::-webkit-scrollbar-track-piece:start {
+  background: transparent;
+  margin-top: 15px;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 1920px) {
+  :root {
+    font-size: calc(0.5010395010395009rem + 0.41580041580041593vw);
+  }
+}
+
+@media screen and (max-width: 1439px) {
+  :root {
+    font-size: calc(0.3498493975903615rem + 0.7228915662650601vw);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  :root {
+    font-size: calc(0.6470588235294118rem + 0.551470588235294vw);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  :root {
+    font-size: calc(0.625rem + 1.2500000000000002vw);
+  }
+
+  // ::-webkit-scrollbar-track-piece:end {
+  //   margin-bottom: 0;
+  // }
+
+  // ::-webkit-scrollbar-track-piece:start {
+  //   margin-top: 0;
+  // }
+}
+
+@media screen and (max-width: 320px) {
+  :root {
+    font-size: calc(0.7492163009404389rem + 1.2539184952978055vw);
+  }
 }
